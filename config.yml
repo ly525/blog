@@ -1,0 +1,42 @@
+title: Ly525的前端自留地
+description: 记录自己的博客、资源、源码、踩坑、轮子、项目
+
+url: https://ly525.github.io/blog
+theme: donob
+
+per_page: 20
+
+# menu
+menu:
+  home: /
+  categories: /categories/
+  tags: /tags/
+  about: /about/
+
+default_category: blog
+
+user: ly525
+repository: blog
+
+
+public_dir: public
+
+authors:
+  - ly525
+
+timezone: Asia/Shanghai
+
+language:
+
+line_numbers:
+
+order:
+
+token: b#644984a2684ce229463fc3a9238d071685d9ec1
+
+cache: false
+
+rss: true
+
+archives:
+  per_page: 30

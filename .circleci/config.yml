@@ -1,0 +1,33 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: node:latest
+
+    working_directory: ~/acyort
+
+    branches:
+      only:
+        - master # config branch
+
+    steps:
+      - checkout
+      - run: npm install acyort -g
+      - run: acyort init 
+      - run: cp config.bak.yml config.yml 
+      # - run: npm i # 可选，如果你需要安装 npm 插件
+      - run: acyort build 
+      - run: rm -R scripts themes
+      - run: git checkout .  
+      - run: git checkout gh-pages # 静态文件存放分支
+      - run: git reset --hard origin/gh-pages
+      # - run: cp -R public/* . 
+      - run: rm config.bak.yml 
+      # - run: rm -R scripts themes public 
+      # - run: rm -R scripts themes 
+      - run: git add .
+      - run: git config user.name "ly525" # 你的 GitHub 用户名
+      - run: git config user.email "lantern.done@gmail.com" # 你的 GitHub 邮箱
+      - run: git commit -m "Updated by circleci - `date`"
+      # 下面填写你的 usename 和 repository  
+      - run: git push -q https://${gh_token}@github.com/ly525/blog.git gh-pages:gh-pages 
