@@ -1,3 +1,5 @@
+## 踩坑可以看issues，有些好东西在wiki
+
 # gesang-fe-something
 1. 前端资源收集整理
 2. 自己看的`书`和Youtube `Chrome Developer`频道
@@ -8,3 +10,4 @@
 # 怎么看
 1. 遇到的问题会放在issues中
 2. 资源类的内容放在wiki中
+
