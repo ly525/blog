@@ -1,6 +1,6 @@
 ## 踩坑可以看issues，有些好东西在wiki
 
-# gesang-fe-something
+# 说明
 1. 前端资源收集整理
 2. 自己看的`书`和Youtube `Chrome Developer`频道
 3. 学习和使用JS, CSS中的问题和经历
