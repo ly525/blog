@@ -19,3 +19,38 @@ sudo dpkg -i nautilus_nutstore_amd64.deb
 # vscode
 # wechat
 # virtualenv django etc
+
+# terminator config file
+echo '[global_config]
+  handle_size = -3
+  enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
+  title_transmit_fg_color = "#000000"
+  suppress_multiple_term_dialog = True
+  title_transmit_bg_color = "#3e3838"
+  inactive_color_offset = 1.0
+[keybindings]
+[profiles]
+  [[default]]
+    palette = "#000000:#5a8e1c:#2d5f5f:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#868e09:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
+    background_image = ""
+    background_darkness = 0.8
+    scrollback_lines = 3000
+    background_type = transparent
+    use_system_font = False
+    scroll_background = False
+    show_titlebar = False
+    cursor_shape = ibeam
+    font = Liberation Mono 12
+    background_color = "#291829"
+    foreground_color = "#e8e8e8"
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+      profile = default
+    [[[window0]]]
+      type = Window
+      parent = ""
+      size = 925, 570
+[plugins]' > /home/ly/.config/terminator/config
