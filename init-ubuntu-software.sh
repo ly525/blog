@@ -1,15 +1,34 @@
-sudo apt-get install git wget curl vim zsh mpg123 sshpass supervisor sqlite3 ssh terminator build-essential 
-libgtop2-dev libgtk-3-dev -y libappindicator3-dev git-core python-pip indicator-netspeed -y
+# notice do not run this file use sudo. yes! not sudo; just run './init-ubuntu-software.sh'
+# update system
+sudo apt update 
+
+# install dev tools
+sudo apt install git git-core wget curl vim supervisor sqlite3 python-pip -y
+
+# install system enhance tools
+sudo apt install sshpass mpg123 ssh terminator build-essential indicator-netspeed -y
+
+# intall base lib
+sudo apt install libgtop2-dev libgtk-3-dev -y libappindicator3-dev -y
+
+
+# install oh-my-zsh for better experience
+sudo apt install zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" #input your password
+
 # install nvm to install node
 sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.32.1/install.sh | bash
-# install oh-my-zsh for better experience
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" #input your password
+echo 'export NVM_DIR="~/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+. /usr/share/autojump/autojump.zsh
+alias open="gvfs-open"'  >> ~/.zshrc
+source ~/.zshrc
 
 nvm ls-remote
 nvm install v7.7.2
 
 # openjdk
-sudo apt install openjdk-9-jdk -y
+# sudo apt install openjdk-9-jdk -y
 # nautilus
 wget https://www.jianguoyun.com/static/exe/installer/ubuntu/nautilus_nutstore_amd64.deb
 sudo dpkg -i nautilus_nutstore_amd64.deb
@@ -21,6 +40,7 @@ sudo dpkg -i nautilus_nutstore_amd64.deb
 # virtualenv django etc
 
 # terminator config file
+mkdir -p ~/.config/terminator
 echo '[global_config]
   handle_size = -3
   enabled_plugins = CustomCommandsMenu, LaunchpadCodeURLHandler, APTURLHandler, LaunchpadBugURLHandler
@@ -53,4 +73,4 @@ echo '[global_config]
       type = Window
       parent = ""
       size = 925, 570
-[plugins]' > /home/ly/.config/terminator/config
+[plugins]' > ~/.config/terminator/config
