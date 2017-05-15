@@ -51,26 +51,54 @@ echo '[global_config]
 [keybindings]
 [profiles]
   [[default]]
-    palette = "#000000:#5a8e1c:#2d5f5f:#cdcd00:#1e90ff:#cd00cd:#00cdcd:#e5e5e5:#4c4c4c:#868e09:#00ff00:#ffff00:#4682b4:#ff00ff:#00ffff:#ffffff"
-    background_image = ""
-    background_darkness = 0.8
-    scrollback_lines = 3000
-    background_type = transparent
     use_system_font = False
-    scroll_background = False
+    login_shell = True
+    background_darkness = 0.92
+    background_type = transparent
+    background_image = None
+    cursor_color = "#3036ec"
+    foreground_color = "#00ff00"
     show_titlebar = False
-    cursor_shape = ibeam
+    custom_command = tmux
     font = Liberation Mono 12
-    background_color = "#291829"
-    foreground_color = "#e8e8e8"
 [layouts]
   [[default]]
-    [[[child1]]]
-      type = Terminal
-      parent = window0
-      profile = default
-    [[[window0]]]
+    [[[child0]]]
+      position = 446:100
       type = Window
+      order = 0
       parent = ""
-      size = 925, 570
+      size = 1440, 1050
+    [[[child1]]]
+      position = 444
+      type = HPaned
+      order = 0
+      parent = child0
+    [[[child2]]]
+      position = 275
+      type = VPaned
+      order = 0
+      parent = child1
+    [[[child5]]]
+      position = 219
+      type = HPaned
+      order = 1
+      parent = child1
+    [[[child6]]]
+      position = 275
+      type = VPaned
+      command = 'j internal;'
+      order = 0
+      parent = child5
+    [[[child9]]]
+      position = 275
+      type = VPaned
+      order = 1
+      parent = child2
+    [[[terminal10]]]
+      profile = default
+      command = 'j internal; pwd'
+      type = Terminal
+      order = 0
+      parent = child2
 [plugins]' > ~/.config/terminator/config
