@@ -102,3 +102,6 @@ echo '[global_config]
       order = 0
       parent = child2
 [plugins]' > ~/.config/terminator/config
+
+sudo ln -s ~/workspace/tools/connect/to /usr/local/bin/to
+
