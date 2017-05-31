@@ -5,6 +5,10 @@ sudo apt update
 # install dev tools
 sudo apt install git git-core wget curl vim supervisor sqlite3 python-pip -y
 
+# config vim editor 
+git config --global core.editor vim
+
+
 # install system enhance tools
 sudo apt install sshpass mpg123 ssh terminator build-essential indicator-netspeed -y
 
