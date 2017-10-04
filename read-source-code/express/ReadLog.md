@@ -13,3 +13,12 @@ lib/express.js / 2017-10-03
         - 6. 之前看的Node.js文档，并参与nodejs.cn的翻译中关于EventEmitter在此刻有了回报.帮助自己理解EventEmitter
         - 7. 
 
+
+app.get('/', callback) / 2017-10-03
+====================
+
+  * app.get('/', (req, res) => res.send('Hello world'))
+    - methods.forEach()
+    - lazyRouter -> new Router -> `app._router.route('/')`
+    - app.handle(req, res, callback) -> router.handle(req, res, callback)
+    - 这部分还是不理解的，需要去看Router文档
