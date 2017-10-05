@@ -3,8 +3,9 @@ function Mei(options) {
     let data = options.data;
     let el = document.getElementById(options.el);// 此处的el应该是数组？element？or String？
     let bindings = {};
-    let _data = {};
+    let _data = this._data = {};
     let bindingMark = 'v-text';
+    let bindingVShowMark = 'v-show'; // 这边可以将标记抽取成Object，以及其extract方法
 
     function extractBrackets() {
         let content = el.innerHTML.replace(/\{\{(.*)\}\}/g, function(match, variable) {
@@ -23,9 +24,18 @@ function Mei(options) {
         });
     }
 
+    function extractVShow() {
+        let vShowElements = document.querySelectorAll(`[${bindingVShowMark}]`);
+        [].forEach.call(vShowElements, function(el) {
+            let variable = el.getAttribute(bindingVShowMark);
+            bindings[variable] = {};
+        });
+    }
+
     // 注意这里： 先解析 v-text 就不会存在 v-text=variable 与 {{varaible}}相同的情况
     extractVText();//
     extractBrackets();
+    extractVShow();
 
 
     function bind(variable) {
@@ -33,6 +43,12 @@ function Mei(options) {
         [].forEach.call(bindings[variable].els, function(el) {
             el.removeAttribute(bindingMark);
         });
+
+        bindings[variable].vShowElements = document.querySelectorAll(`[${bindingVShowMark}="${variable}"]`);
+        [].forEach.call(bindings[variable].vShowElements, function(el) {
+            el.removeAttribute(bindingVShowMark);
+        });
+
         let val = _data[variable]; // TODO 这里可以写在下面的get/set 中使用bindings[variable]实现，为何要这样做呢？
         Object.defineProperty(_data, variable, {
             get() {
@@ -42,8 +58,13 @@ function Mei(options) {
             set(newVal) {
                 if (newVal === val) return;
                 val = newVal;
+                // 更新v-text 和 {{}} 绑定元素
                 [].forEach.call(bindings[variable].els, function(el){
                     el.textContent = newVal;
+                });
+                // 更新v-show绑定元素
+                [].forEach.call(bindings[variable].vShowElements, function(el){
+                    el.style.display = !!newVal ? '' : 'none';
                 });
 
             }
@@ -61,7 +82,6 @@ function Mei(options) {
     for (let variable in data) {
         _data[variable] = data[variable];
     }
-
 
 
 

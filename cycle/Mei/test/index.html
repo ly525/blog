@@ -13,7 +13,12 @@
         <!-- v-text和{{}}相同的时候，可以使用{{}}的规则 -->
         <div class="navbar" v-text="userName"></div>
         <div class="navbar" v-text="userAge"></div>
-        <div class="loading" v-show="showLoading">loading</div>
+        <div class="v-show-example">
+            <button id="v-show-example-button" onclick="toggleShow()">hidden/show</button>
+            <span class="loading" v-show="showLoading">loading</span>
+
+        </div>
+
     </div>
     <script>
         var mei = new Mei({
@@ -33,6 +38,10 @@
             }
         });
         // mei.updateUserInfo()
+
+        function toggleShow() {
+            mei._data.showLoading = !mei._data.showLoading;
+        }
 
     </script>
 </body>
