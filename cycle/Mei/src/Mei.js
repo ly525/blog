@@ -11,6 +11,12 @@ function Mei(options) {
         return `<span ${bindingMark}="${variable}"></span>`;
     })
 
+    vTextElments = document.querySelectorAll(`[${bindingMark}]`);
+    [].forEach.call(vTextElments, function(el) {
+        let variable = el.getAttribute(bindingMark);
+        bindings[variable] = {};
+    });
+
     el.innerHTML = content;
 
     function bind(variable) {
