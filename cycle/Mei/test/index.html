@@ -13,13 +13,15 @@
         <!-- v-text和{{}}相同的时候，可以使用{{}}的规则 -->
         <div class="navbar" v-text="userName"></div>
         <div class="navbar" v-text="userAge"></div>
+        <div class="loading" v-show="showLoading">loading</div>
     </div>
     <script>
         var mei = new Mei({
             el: 'app',
             data: {
                 userName: 'ly525',
-                userAge: 18
+                userAge: 18,
+                showLoading: true,
             },
             methods: {
                 updateUserInfo(data) {

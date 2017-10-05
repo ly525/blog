@@ -5,19 +5,28 @@ function Mei(options) {
     let bindings = {};
     let _data = {};
     let bindingMark = 'v-text';
-    let content = el.innerHTML.replace(/\{\{(.*)\}\}/g, function(match, variable) {
-        // 得到hmtl中有多少需要双向绑定的变量
-        bindings[variable] = {}
-        return `<span ${bindingMark}="${variable}"></span>`;
-    })
 
-    vTextElments = document.querySelectorAll(`[${bindingMark}]`);
-    [].forEach.call(vTextElments, function(el) {
-        let variable = el.getAttribute(bindingMark);
-        bindings[variable] = {};
-    });
+    function extractBrackets() {
+        let content = el.innerHTML.replace(/\{\{(.*)\}\}/g, function(match, variable) {
+            // 得到hmtl中有多少需要双向绑定的变量
+            bindings[variable] = {}
+            return `<span ${bindingMark}="${variable}"></span>`;
+        });
+        el.innerHTML = content;
+    }
 
-    el.innerHTML = content;
+    function extractVText() {
+        let vTextElments = document.querySelectorAll(`[${bindingMark}]`);
+        [].forEach.call(vTextElments, function(el) {
+            let variable = el.getAttribute(bindingMark);
+            bindings[variable] = {};
+        });
+    }
+
+    // 注意这里： 先解析 v-text 就不会存在 v-text=variable 与 {{varaible}}相同的情况
+    extractVText();//
+    extractBrackets();
+
 
     function bind(variable) {
         bindings[variable].els = document.querySelectorAll(`[${bindingMark}="${variable}"]`);
