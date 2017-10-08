@@ -18,6 +18,10 @@
             <span class="loading" v-show="showLoading">loading</span>
 
         </div>
+        <div class="v-on-example">
+            <button v-on="click:updateUserInfo">updateUserInfo</button>
+            <button v-on="focus:whenButtonFocus" v-on="click:updateUserAge">whenButtonFocus</button>
+        </div>
 
     </div>
     <script>
@@ -27,13 +31,20 @@
                 userName: 'ly525',
                 userAge: 18,
                 showLoading: true,
-            },
-            methods: {
-                updateUserInfo(data) {
+                updateUserInfo: function() {
                     // async action
-                    console.log(this === window)
+                    console.log(this === window);
+                    console.log(this === mei);
                     // this.userName = data.userName
-                    this.userName = 'foo'
+                    // this.userName = 'foo'
+                    console.log('updateUserInfo method called');
+                    this._data.userName = 'newLy525';
+                },
+                updateUserAge: function() {
+                    this._data.userAge = 19;
+                },
+                whenButtonFocus: function() {
+                    console.log('button on focus');
                 }
             }
         });

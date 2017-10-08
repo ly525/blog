@@ -1,11 +1,34 @@
 function Mei(options) {
     // TODO option 和 data 类型的判断
+    let self = this;
     let data = options.data;
     let el = document.getElementById(options.el);// 此处的el应该是数组？element？or String？
     let bindings = {};
     let _data = this._data = {};
     let bindingMark = 'v-text';
     let bindingVShowMark = 'v-show'; // 这边可以将标记抽取成Object，以及其extract方法
+    let bindingVOnMark = 'v-on';
+
+    function bindHandler(mei, el, event, handler) {
+        el.addEventListener(event, handler.bind(mei));
+    }
+    function extractVOn() {
+        let vOnElements = document.querySelectorAll(`[${bindingVOnMark}]`);
+        vOnElements.forEach.call(vOnElements, function(el) {
+            let exp = el.getAttribute(`${bindingVOnMark}`);
+            let [event, handler] = exp.split(':');
+            let variable = handler;
+            bindings[variable] = {};
+            bindings[variable].event =  event;
+            bindings[variable].vOnElements = [];
+
+            // if (!bindings[variable]) {
+            // }
+            bindings[variable].vOnElements.push(el);
+            // update(self, el, event, handler);
+
+        });
+    }
 
     function extractBrackets() {
         let content = el.innerHTML.replace(/\{\{(.*)\}\}/g, function(match, variable) {
@@ -36,17 +59,24 @@ function Mei(options) {
     extractVText();//
     extractBrackets();
     extractVShow();
+    extractVOn();
 
 
     function bind(variable) {
-        bindings[variable].els = document.querySelectorAll(`[${bindingMark}="${variable}"]`);
+        let binding = bindings[variable];
+        binding.els = document.querySelectorAll(`[${bindingMark}="${variable}"]`);
         [].forEach.call(bindings[variable].els, function(el) {
             el.removeAttribute(bindingMark);
         });
 
-        bindings[variable].vShowElements = document.querySelectorAll(`[${bindingVShowMark}="${variable}"]`);
-        [].forEach.call(bindings[variable].vShowElements, function(el) {
+        binding.vShowElements = document.querySelectorAll(`[${bindingVShowMark}="${variable}"]`);
+        [].forEach.call(binding.vShowElements, function(el) {
             el.removeAttribute(bindingVShowMark);
+        });
+
+        let vOnElements = binding.vOnElements || [];
+        [].forEach.call(vOnElements, function(el) {
+            el.removeAttribute(bindingVOnMark);
         });
 
         let val = _data[variable]; // TODO 这里可以写在下面的get/set 中使用bindings[variable]实现，为何要这样做呢？
@@ -65,6 +95,11 @@ function Mei(options) {
                 // 更新v-show绑定元素
                 [].forEach.call(bindings[variable].vShowElements, function(el){
                     el.style.display = !!newVal ? '' : 'none';
+                });
+
+                // 给v-on元素绑定事件
+                [].forEach.call(vOnElements, function(el) {
+                    bindHandler(self, el, binding.event, newVal);
                 });
 
             }
