@@ -1,3 +1,5 @@
+import marks from './marks'
+
 function Mei(options) {
     // TODO option 和 data 类型的判断
     let self = this;
@@ -122,3 +124,5 @@ function Mei(options) {
 
 
 }
+
+export default Mei
