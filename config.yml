@@ -11,7 +11,7 @@ menu:
   Archives: /archives/
   About: /about/
 
-default_category: blog
+default_category: /
 
 user: ly525
 repository: blog
