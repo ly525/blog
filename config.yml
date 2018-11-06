@@ -1,23 +1,25 @@
-title: Ly525的前端自留地
-description: 记录自己的博客、资源、源码、踩坑、轮子、项目
+title: Blog of Ly525
+description: To be a better man
 
 url: https://ly525.github.io/blog
 theme: donob
 
-per_page: 20
+per_page: 7
 
 # menu
 menu:
-  home: /
-  categories: /categories/
-  tags: /tags/
-  about: /about/
+  Archives: /archives/
+  About: /about/
 
 default_category: blog
 
 user: ly525
 repository: blog
 
+plugins:
+  - acyort-rss
+  - acyort-archives
+  - acyort-paginator
 
 public_dir: public
 
@@ -32,9 +34,9 @@ line_numbers:
 
 order:
 
-token: b#644984a2684ce229463fc3a9238d071685d9ec1
+token: 9#12c6ebb684b7733eb8c04618d2f6b9fbfbdb681
 
-cache: false
+cache: true
 
 rss: true
 

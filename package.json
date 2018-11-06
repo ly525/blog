@@ -1,0 +1,24 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "# 说明 1. 前端资源收集整理 2. 自己看的`书`和Youtube `Chrome Developer`频道 3. 学习和使用JS, CSS中的问题和经历 4. 前端工程化(目前是`webpack`) 5. 还有一些没有想好的内容大部分都会在这里(偏向技术性内容)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ly525/blog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ly525/blog/issues"
+  },
+  "homepage": "https://github.com/ly525/blog#readme",
+  "dependencies": {
+    "acyort-archives": "^1.0.4",
+    "acyort-paginator": "^0.1.3",
+    "acyort-rss": "^0.1.4"
+  }
+}
