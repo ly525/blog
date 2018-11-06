@@ -5,3 +5,4 @@ _issues.json
 node_modules/
 public/
 themes/
+package-lock.json
