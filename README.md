@@ -1,4 +1,5 @@
-## 文章全部都在 [issues](https://github.com/ly525/blog/issues)
+## 文章全部都在 [issues](https://github.com/ly525/blog/issues)，使用 Markdown 书写
+渲染之后 HTML 版本的博客网址是：https://ly525.github.io/blog/ 欢迎在 issue 中和我讨论相关问题。独学而无友,则孤陋而寡闻
 
 # 博客内容分类
 1. 绝大部分是在开发实际项目过程中遇到的问题和思考，有的可能只有寥寥几个字的标题，需要补充完善。主要包含的方向🈶️：
