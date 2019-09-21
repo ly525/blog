@@ -1,8 +1,4 @@
-
-<p style="text-align: center;">
-    <!-- <a href="#"><img src="assets/blog.png" width="50%"/></a> -->
-    <h2>小小鲁班的技术口袋</h2>
-</p>
+<h1  align="center">小小鲁班的技术口袋</h1>
 
 
 <p align='center'>
@@ -16,10 +12,10 @@
     <img src="https://badgen.net/github/release/ly525/blog"/>
 </p>
 
-## 文章全部都在 [issues](https://github.com/ly525/blog/issues)，使用 Markdown 书写
+### 文章全部都在 [issues](https://github.com/ly525/blog/issues)，使用 Markdown 书写
 > 欢迎在 issue 中和我讨论相关问题。独学而无友,则孤陋而寡闻
 
-# 博客内容分类
+### 博客内容分类
 1. 绝大部分是在开发实际项目过程中遇到的问题和思考，有的可能只有寥寥几个字的标题，需要补充完善。主要包含的方向🈶️：
 > 原生JavaScript、CSS、Vue、React、前端工程化、设计、代码规范、Python、小程序-React 以及其他方面的踩坑与出坑经历
 1. 前端资源收集整理
@@ -29,7 +25,7 @@
 4. )
 5. 还有一些没有想好的内容大部分都会在这里(偏向技术性内容)
 
-## 完结篇
+### 完结篇
 - [遍历 vuex-store/modules 下的所有文件，自动加载所有的 vuex 的module](https://github.com/ly525/blog/issues/339)  <sup>0 :speech_balloon:</sup>
 - [给表格添加 loading 蒙层，解决表格 action 和 排序 并行操作导致的数据稳定问题](https://github.com/ly525/blog/issues/328)  <sup>0 :speech_balloon:</sup>
 - [在安利鲁班H5的时候，留下了微信群联系方式，自己想了一些微信群过期的小办法](https://github.com/ly525/blog/issues/325)  <sup>0 :speech_balloon:</sup>
@@ -67,55 +63,13 @@
 
 ## 最新 :new:
 
-#### [遍历 vuex-store/modules 下的所有文件，自动加载所有的 vuex 的module](https://github.com/ly525/blog/issues/339) <sup>0 :speech_balloon:</sup> 	 2019-09-17 07:40:44
+1. [遍历 vuex-store/modules 下的所有文件，自动加载所有的 vuex 的module](https://github.com/ly525/blog/issues/339) <sup>0 :speech_balloon:</sup> 	 2019-09-17 07:40:44
+2. [vuetify 文档 主体内容滚动，其 TOC 跟随滚动的原理研究](https://github.com/ly525/blog/issues/338) <sup>0 :speech_balloon:</sup> 	 2019-09-17 07:05:54
 
-> :label: : [[完结篇]](https://github.com/ly525/blog/labels/%5B%E5%AE%8C%E7%BB%93%E7%AF%87%5D)
+3. [vuetify docs dev/ vuetify 文档本地开发 ](https://github.com/ly525/blog/issues/337) <sup>0 :speech_balloon:</sup> 	 2019-09-17 03:48:08
+4. [float next float](https://github.com/ly525/blog/issues/336) <sup>0 :speech_balloon:</sup> 	 2019-09-17 00:27:18
 
----
-[更多>>>](https://github.com/ly525/blog/issues/339)
-
-
-#### [vuetify 文档 主体内容滚动，其 TOC 跟随滚动的原理研究](https://github.com/ly525/blog/issues/338) <sup>0 :speech_balloon:</sup> 	 2019-09-17 07:05:54
-
-> :label: :
-
-
-
-[更多>>>](https://github.com/ly525/blog/issues/338)
-
----
-
-
-#### [vuetify docs dev/ vuetify 文档本地开发 ](https://github.com/ly525/blog/issues/337) <sup>0 :speech_balloon:</sup> 	 2019-09-17 03:48:08
-
-> :label: :
-
-https://github.com/vuetifyjs/vuetify/issues/8300
-
-[更多>>>](https://github.com/ly525/blog/issues/337)
-
----
-
-
-#### [float next float](https://github.com/ly525/blog/issues/336) <sup>0 :speech_balloon:</sup> 	 2019-09-17 00:27:18
-
-> :label: :
-
-
-
-[更多>>>](https://github.com/ly525/blog/issues/336)
-
----
-
-
-#### [vuetify v-img 源码笔记](https://github.com/ly525/blog/issues/335) <sup>0 :speech_balloon:</sup> 	分类 2019-09-16 07:39:00
-
-> :label: :
-
-
-[更多>>>](https://github.com/ly525/blog/issues/335)
-
----
+5. [vuetify v-img 源码笔记](https://github.com/ly525/blog/issues/335) <sup>0 :speech_balloon:</sup> 	分类 2019-09-16 07:39:00
 
 
 ## 分类  :card_file_box:
