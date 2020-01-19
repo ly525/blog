@@ -20,6 +20,10 @@
 
 > 主要包含的方向🈶️：
 
+## 完结篇
+[完结篇：已经写完的文章](https://github.com/ly525/blog/projects/14)
+
+
 ## 基础知识
 - [读书笔记-非技术](https://github.com/ly525/blog/projects/10)
 - [读书笔记-技术](https://github.com/ly525/blog/projects/4)
