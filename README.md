@@ -14,7 +14,7 @@
 
 > 文章全部都在 `issues`，使用 markdown 书写，欢迎和我讨论相关问题。独学而无友，则孤陋而寡闻
 
-> 直接从：[Projects](https://github.com/ly525/blog/projects)  进去，挑感兴趣的看就成
+> 直接从：[Projects](https://github.com/ly525/blog/projects?query=is%3Aopen+sort%3Aname-asc)  进去，挑感兴趣的看就成
 
 > 绝大部分是在开发实际项目过程中遇到的问题和思考，有的可能只有寥寥几个字的标题，需要补充完善。
 
