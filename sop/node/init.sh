@@ -90,8 +90,6 @@ install_global_npm_modules() {
   echo '[全局模块] nrm yarn 开始安装'
   npm set registry https://registry.npmmirror.com
   npm install -g yarn nrm
-  nrm add ymm http://npm.amh-group.com
-  nrm use ymm
   nrm ls
   echo '✅ [全局模块] nrm yarn 安装/配置完成'
   tips+="✅ [全局模块] yarn 安装完成：yarn -v $(yarn -v)"
