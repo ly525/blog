@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo '欢迎来到大前端团队，本命令将会完成Node环境的初始化'
+
+
 # shell vs javascript 注意事项
 # 1. if 需要使用 fi 来结束
 # 2. 取反需要有空格：! is_valid 而不是 !is_valid
@@ -104,7 +107,6 @@ print_tips_after_install_finish() {
 }
 
 
-echo '欢迎来到大前端团队，本命令将会完成Node环境的初始化'
 
 # TODO
 # detect curl/wget installed
