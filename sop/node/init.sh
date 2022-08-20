@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-echo '欢迎来到大前端团队，本命令将会完成Node环境的初始化'
+echo '欢迎来到大前端团队，本命令将会完成Node环境的初始化，主要包含如下内容：'
+echo '[安装 node 环境]：nvm、node.js、npm、yarn、nrm、git-open、homebrew'
+echo '[安装 常用软件]：chrome、vscode、sublime、postman、xmind、语雀、微信开发者工具、腾讯会议、腾讯视频、网易云音乐等软件'
+echo '[配置 相关软件]：hosts、npm 公司源'
+
 
 
 # shell vs javascript 注意事项
