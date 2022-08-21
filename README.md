@@ -1,6 +1,7 @@
 <h1  align="center">小小鲁班的技术口袋</h1>
 
 
+
 <p align='center'>
     <!-- <img src="https://badgen.net/circleci/github/ly525/blog"/> -->
     <img src="https://badgen.net/badge/labels/33"/>
@@ -12,13 +13,16 @@
     <img src="https://badgen.net/github/release/ly525/blog"/>
 </p>
 
-> 文章全部都在 `issues`，使用 markdown 书写，欢迎和我讨论相关问题。独学而无友，则孤陋而寡闻
+### 动机
+- 独学而无友，则孤陋而寡闻
+- 💡 想法太多，不写下来，让其在脑海中胡乱碰撞、胡思乱想，反而不成体系，对自己是一种精神消耗，想法/灵光一闪 没有归属，不成体系，
+- 目前阶段，笔力太浅，要沉淀，先开始写
 
-> 直接从：[Projects](https://github.com/ly525/blog/projects?query=is%3Aopen+sort%3Aname-asc)  进去，挑感兴趣的看就成
 
-> 绝大部分是在开发实际项目过程中遇到的问题和思考，有的可能只有寥寥几个字的标题，需要补充完善。
-
-> 主要包含的方向🈶️：
+> - 文章全部都在 `issues`，使用 markdown 书写，欢迎和我讨论相关问题
+> - 直接从：[Projects](https://github.com/ly525/blog/projects?query=is%3Aopen+sort%3Aname-asc)  进去，挑感兴趣的看就成
+> - 绝大部分是在开发实际项目过程中遇到的问题和思考，有的可能只有寥寥几个字的标题，需要补充完善。
+> - 主要包含的方向🈶️：
 
 ## 完结篇
 [完结篇：已经写完的文章](https://github.com/ly525/blog/projects/14)
