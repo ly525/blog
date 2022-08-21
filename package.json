@@ -16,9 +16,10 @@
     "url": "https://github.com/ly525/blog/issues"
   },
   "homepage": "https://github.com/ly525/blog#readme",
-  "dependencies": {
-    "acyort-archives": "^1.0.4",
-    "acyort-paginator": "^0.1.3",
-    "acyort-rss": "^0.1.4"
-  }
+  "dependencies": {},
+  "devDependencies": {
+    "axios": "^0.27.2",
+    "fs-extra": "^10.1.0"
+  },
+  "type": "module"
 }

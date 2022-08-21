@@ -6,3 +6,4 @@ node_modules/
 public/
 themes/
 package-lock.json
+sop/gitlab/ymm.js
