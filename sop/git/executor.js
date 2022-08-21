@@ -15,7 +15,7 @@ export async function runCloneGitLab(setting, args) {
   const { folder, uid, realRun } = args
   log = setting.log || log
 
-  const repos = await fetchReposByUser(setting.reposByUidApi(uid));
+  const repos = await fetchReposByUser(setting.reposByUidApi({ uid }));
   if (!realRun) return printReposOverview(repos)
 
   const pullSuccessRepos = repos.map((item) => item.name); // 拉取成功的repos
