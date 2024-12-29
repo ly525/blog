@@ -1,8 +1,0 @@
-.DS_Store
-*.swp
-Thumbs.db
-_issues.json
-node_modules/
-public/
-themes/
-package-lock.json
