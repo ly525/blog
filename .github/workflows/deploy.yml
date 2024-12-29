@@ -1,0 +1,38 @@
+name: 部署VitePress
+
+on:
+  push:
+    branches:
+      - vitepress-blog # 这段是在推送到 vitepress-blog 分支时触发该命令
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: vitepress-blog # 这一步检查 vitepress-blog 代码
+
+      - name: Setup Node.js and yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.10.0' # 设置 nodejs 的版本
+          
+      - name: Install yarn
+        run: npm install -g yarn # 全局安装 pnpm
+
+      - name: Install dependencies
+        run: yarn install # 使用 pnpm 安装依赖
+
+      - name: Build VitePress
+        run: yarn build # 这里是打包 vitepress 命令
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }} # 这一步很重要，单独看下面的大步骤，主要是用来给该脚本一些仓库权限
+          publish_dir: dist # 指定该文件夹中的 dist 
+          publish_branch: gh-pages # 推送到关联仓库的 gh-pages 分支
+          dotfiles: true  # 包括在提交中，即使被 .gitignore 文件忽略
