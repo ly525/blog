@@ -1,23 +1,23 @@
 {
-  "hash": "48034e36",
-  "browserHash": "13d7895c",
+  "hash": "34ae6dd2",
+  "browserHash": "fe6ae77f",
   "optimized": {
     "vue": {
       "src": "../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "bee548fa",
+      "fileHash": "70dc81da",
       "needsInterop": false
     },
     "pinia": {
       "src": "../../../node_modules/pinia/dist/pinia.mjs",
       "file": "pinia.js",
-      "fileHash": "79f0a1b2",
+      "fileHash": "c700c4e0",
       "needsInterop": false
     },
     "qr-code-with-logo": {
       "src": "../../../node_modules/qr-code-with-logo/lib/index.esm.js",
       "file": "qr-code-with-logo.js",
-      "fileHash": "2ea394ae",
+      "fileHash": "b082c096",
       "needsInterop": false
     }
   },
