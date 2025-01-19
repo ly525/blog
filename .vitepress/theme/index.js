@@ -1,5 +1,6 @@
 import DefaultTheme from 'vitepress/theme'
 import './styles/vars.css'
+import './styles/style.css'
 import { createPinia } from 'pinia'
 import CodeSimulator from './components/CodeSimulator.vue'
 import MobilePreview from './components/MobilePreview/index.vue'

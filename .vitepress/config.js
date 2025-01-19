@@ -67,20 +67,18 @@ export default {
           items: [
             { text: '技术选型', link: '/pages/spec/team-tech' },
             { text: '开发环境', link: '/pages/spec/dev-environment' },
-            { text: '日常工具', link: '/pages/spec/daily-tools' },
             { text: '框架', link: '/pages/spec/framework' },
             { text: '组件库', link: '/pages/spec/component-library' },
             { text: '工程化', link: '/pages/spec/engineering' },
             { text: '稳定性', link: '/pages/spec/stability' },
             { text: '监控/埋点', link: '/pages/spec/monitoring' },
             { text: '地图', link: '/pages/spec/map' },
-            { text: '请求', link: '/pages/spec/request' },
-            { text: 'CSS', link: '/pages/spec/request' },
+            { text: 'CSS', link: '/pages/spec/css' },
             {
               text: '组件',
               items: [
-                { text: '动态表单', link: '/pages/spec/platform' },
-                { text: 'CRUD', link: '/pages/spec/platform' },
+                { text: '动态表单', link: '/pages/spec/dynamic-form' },
+                { text: 'CRUD', link: '/pages/spec/crud' },
               ]
             },
             {
@@ -92,21 +90,16 @@ export default {
             },
             {
               text: '稳定性', items: [
-                { text: '监控｜大盘', link: '/pages/spec/admin-system' },
-                { text: '埋点', link: '/pages/spec/admin-system' },
+                { text: '监控｜大盘', link: '/pages/spec/monitor' },
+                { text: '埋点', link: '/pages/spec/track' },
+                { text: 'Sentry', link: '/pages/spec/sentry' },
               ]
             },
             {
               text: '工程架构', items: [
-                { text: '微前端', link: '/pages/spec/admin-system' },
-                { text: '请求库', link: '/pages/spec/admin-system' },
+                { text: '微前端', link: '/pages/spec/microweb' },
+                { text: '请求库', link: '/pages/spec/request' },
                 { text: '路由', link: '/pages/spec/route' }
-              ]
-            },
-            {
-              text: '工程化', items: [
-                { text: '组件库', link: '/pages/spec/admin-system' },
-                { text: '请求库', link: '/pages/spec/admin-system' }
               ]
             },
             {
@@ -116,12 +109,13 @@ export default {
             },
             {
               text: '文档｜文件', items: [
-                { text: '富文本', link: '/pages/spec/admin-system' },
-                { text: 'PDF', link: '/pages/spec/admin-system' },
-                { text: 'Excel', link: '/pages/spec/admin-system' },
-                { text: 'Word', link: '/pages/spec/admin-system' },
-                { text: '音视频', link: '/pages/spec/admin-system' },
-                { text: '图片', link: '/pages/spec/admin-system' }
+                { text: '富文本', link: '/pages/spec/rich-text' },
+                { text: 'PDF', link: '/pages/spec/pdf' },
+                { text: 'Excel', link: '/pages/spec/excel' },
+                { text: 'Word', link: '/pages/spec/word' },
+                { text: '音频', link: '/pages/spec/audio' },
+                { text: '视频', link: '/pages/spec/video' },
+                { text: '图片', link: '/pages/spec/image' }
               ]
             },
           ]
